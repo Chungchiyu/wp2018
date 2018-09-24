@@ -7,26 +7,20 @@ div.relative {
     height: 600px;
     background-color: rgba(200, 200, 200, 0.1);
 } 
-.center {
-position: absolute;
+.pic {
+    position: absolute;
 top:10%;
+left: 15%;
+}
+.pic mo{
+position: relative;
 left: 30%;
-}
-.center Mo {
-    margin: 0;
-    
-    top: 65px;
-    left: 260px;
-}
-.center pic {
-position: relayive;
-    left: 0%;
 }
 .content a{
 margin: 0;
     position: absolute;
     top: 20%;
-    left: 32%;
+    left: 20%;
     font-size: 30px;
 }
 .button {
@@ -39,8 +33,8 @@ margin: 0;
     font-size: 15px;
     cursor: pointer;
     position: absolute;
-    top: 37%;
-    left: 30%;
+    top: 35%;
+    left: 15%;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     border-radius: 5px;
@@ -51,8 +45,7 @@ color:white;
 }
 .button2 {
 position: absolute;
-    top: 37%;
-    left:38.5%;
+    left:30%;
     }
     .button::before{
     content:"Map";
@@ -67,13 +60,12 @@ position: absolute;
 <body>
 
 <div class="relative">
-<div class="center">
-<pic><a target="_blank" href="icon.png">
-    <img src="icon.png" alt="icon" width="30" height="20">
-  </a></pic>
-<Mo>Motiva</Mo>
-</div>
-</div>
+<div class="pic">
+<a target="_blank" href="img_5terre.jpg">
+<img src="img_5terre.jpg" alt="icon" width="30" height="20">
+</a>
+<mo>Motiva</mo></div>
+
 <div class="content">
 <a>Your student is<br><b>begging</b> to you</a>
 </div>
