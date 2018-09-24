@@ -1,26 +1,26 @@
 <html>
 <head>
 <style>
-.center {
+div.relative {
     position: relative;
-    margin: auto;
     width: 320px;
     height: 600px;
-    padding: 10px;
-    left: 50%;
     background-color: rgba(200, 200, 200, 0.1);
+} 
+.center {
+position: absolute;
+top:10%;
+left: 30%;
 }
 .center Mo {
     margin: 0;
-    position: absolute;
+    
     top: 65px;
     left: 260px;
 }
 .center pic {
-    margin: 0;
-    position: absolute;
-    top: 65px;
-    left: 190px;
+position: absolute;
+    left: -100%;
 }
 .content a{
 margin: 0;
@@ -54,25 +54,37 @@ position: absolute;
     top: 37%;
     left:38.5%;
     }
+    .button::before{
+    content:"Map";
+    color:black;
+    display:none;
+    }
+    .button:active{
+    color:black;
+    }
 </style>
 </head>
 <body>
 
+<div class="relative">
 <div class="center">
 <pic><a target="_blank" href="img_5terre.jpg">
     <img src="img_5terre.jpg" alt="icon" width="30" height="20">
   </a></pic>
 <Mo>Motiva</Mo>
-
-
+</div>
+</div>
 <div class="content">
-<a>Your student is<br><b>begging</b> to you</br></a>
+<a>Your student is<br><b>begging</b> to you</a>
 </div>
 
-<button class="button"><b>Map</b></button>
+<button class="button" onclick="ChangePage()"><b>Map</b></button>
 <button class="button button2"><b>AR</b></button>
 
-
+<script language="javascript">
+function ChangePage() {
+}
+</script>
 
 
 </body>
