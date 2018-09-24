@@ -4,8 +4,9 @@
 div.relative {
     position: absolute;
     width: 320px;
-    height: 600px;
+    height: 670px;
     background-color: rgba(200, 200, 200, 0.1);
+    background-image:url(web design.png);
 } 
 .pic {
     position: absolute;
@@ -26,21 +27,32 @@ margin: 0;
 }
 .content dead{
 position: absolute;
-top:70%;
+top:66%;
 left: 12%;
 color:gray;
 }
 .content deadtime{
 position: absolute;
-top:75%;
+top:70%;
 left:18%;
 text-align: center;
 font-size:30px;
 }
 .content day{
 position: absolute;
-top:77%;
+top:72%;
 left:35%;
+}
+.content need{
+position: absolute;
+bottom:6%;
+left:12%;
+color:gray;
+}
+.content point{
+position: absolute;
+bottom:6%;
+left:25%;
 }
 .button {
     background-color: rgba(200, 200, 200, 0);
@@ -74,14 +86,24 @@ position: absolute;
     .button:active{
     color:black;
     }
+    
+div.absolute {
+    position: absolute;
+    top: 78%;
+    right: 0;
+    width: 87%;
+    height: 10%;
+background-color: rgba(100, 100, 100, 0.5);
+border-radius: 5px;
+}
 </style>
 </head>
 <body>
 
 <div class="relative">
 <div class="pic">
-<a target="_blank" href="img_5terre.jpg">
-<img src="img_5terre.jpg" alt="icon" width="30" height="20">
+<a target="_blank" href="icon.png">
+<img src="icon.png" alt="icon" width="30" height="20">
 </a>
 <mo>Motiva</mo></div>
 
@@ -90,10 +112,13 @@ position: absolute;
 <dead>Deadline</dead>
 <deadtime><b>1</b></deadtime>
 <day>Day</day>
+<need>Need</need>
+<point><b>50 point</b></point>
 </div>
 
 <button class="button" onclick="ChangePage()"><b>Map</b></button>
 <button class="button button2"><b>AR</b></button>
+<div class="absolute"></div>
 </div>
 <script language="javascript">
 function ChangePage() {
