@@ -8,12 +8,12 @@ div.relative {
     background-color: rgba(200, 200, 200, 0.1);
 } 
 .backpic{
-    width: 320px;
+width: 320px;
     height: 670px;
-    background-image:url(web_design.png);
+background-image:url(web_design.png);
     background-size: 320px 670px;
     background-repeat: no-repeat;
-    opacity:0.05;
+    opacity:0.1;
     }
 .pic {
     position: absolute;
@@ -103,17 +103,44 @@ div.absolute {
 background-color: rgba(100, 100, 100, 0.5);
 border-radius: 5px;
 }
+div.absolute pic{
+position:absolute;
+top:15%;
+}
+div.absolute comment{
+position:absolute;
+top:28%;
+right:5%;
+}
+div.absolute cq{
+position:absolute;
+top:20%;
+right:35%;
+width:5.5em;
+text-align:center;
+border: 1px solid white;
+color:white;
+border-radius: 1px;
+}
+div.absolute name{
+position:absolute;
+bottom:20%;
+left:34%;
+color:white;
+font-size:10px;
+}
 </style>
 </head>
 <body>
 
 <div class="relative">
-    <div class="backpic"></div>
+
+<div class="backpic"></div>
+
 <div class="pic">
-<a target="_blank" href="icon.png">
 <img src="icon.png" alt="icon" width="30" height="20">
-</a>
-<mo>Motiva</mo></div>
+<mo>Motiva</mo>
+</div>
 
 <div class="content">
 <a>Your student is<br><b>begging</b> to you</a>
@@ -124,9 +151,17 @@ border-radius: 5px;
 <point><b>50 point</b></point>
 </div>
 
+
 <button class="button" onclick="ChangePage()"><b>Map</b></button>
 <button class="button button2"><b>AR</b></button>
-<div class="absolute"></div>
+
+<div class="absolute">
+<pic><img src="CQ.png" alt="icon" width="60" height="47"></pic>
+<comment><img src="comment.png" alt="icon" width="30" height="28.5"></comment>
+<cq><b>Class Quest</b></cq>
+<name>Chung Chi Yu</name>
+</div>
+
 </div>
 <script language="javascript">
 function ChangePage() {
