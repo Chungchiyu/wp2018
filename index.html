@@ -1,9 +1,11 @@
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
 div.relative {
     position: relative;
     display:block;
+    opacity:0;
     margin-left:auto;
     margin-right:auto;
     width: 320px;
@@ -88,14 +90,10 @@ color:white;
 position: absolute;
     left:30%;
     }
-    .button::before{
-    content:"Map";
-    color:black;
-    display:none;
-    }
     .button:active{
     color:black;
     }
+.buttonIni{}
     
 div.absolute {
     position: absolute;
@@ -134,6 +132,29 @@ color:white;
 font-size:10px;
 }
 </style>
+<script>
+
+$(document).ready(function(){
+$("div.relative").css("top","-100px").animate({top:'0px',opacity:'1'},1000);
+$("div").delay(1500);
+$("div.pic").css("left","-100px").animate({left:'8px',opacity:'1'},800);
+$("#b1").css("background-color","lightgray")
+        .css("color","black");
+           $("#b1").click(function(){
+           $("#b1").css("background-color","lightgray")
+                   .css("color","black");
+           $("#b2").css("background-color","rgba(0, 0, 0, 0)")
+                   .css("color","lightgray");
+           });
+           $("#b2").click(function(){
+           $("#b2").css("background-color","lightgray")
+                   .css("color","black");
+           $("#b1").css("background-color","rgba(0, 0, 0, 0)")
+                   .css("color","lightgray");
+           });
+});
+
+</script>
 </head>
 <body>
 
@@ -156,8 +177,8 @@ font-size:10px;
 </div>
 
 
-<button class="button" onclick="ChangePage()"><b>Map</b></button>
-<button class="button button2"><b>AR</b></button>
+<button id=b1 class="button"><b>Map</b></button>
+<button id=b2 class="button button2"><b>AR</b></button>
 
 <div class="absolute">
 <pic><img src="CQ.png" alt="icon" width="60" height="47"></pic>
