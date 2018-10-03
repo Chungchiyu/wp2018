@@ -93,7 +93,6 @@ position: absolute;
     .button:active{
     color:black;
     }
-.buttonIni{}
     
 div.absolute {
     position: absolute;
@@ -137,7 +136,12 @@ font-size:10px;
 $(document).ready(function(){
 $("div.relative").css("top","-100px").animate({top:'0px',opacity:'1'},1000);
 $("div").delay(1500);
-$("div.pic").css("left","-100px").animate({left:'8px',opacity:'1'},800);
+$("div.pic").css("left","-100px").css("opacity","0").animate({left:'8px',opacity:'1'},800);
+$("div.absolute").css("width","0px").css("opacity","0").animate({width:'+=87%',opacity:'1'},800);
+$("button").delay(1500).css("opacity","0").animate({opacity:'1'},1000);
+$("#dead").delay(1500).css("opacity","0").animate({opacity:'1'},1000);
+$("div.content need").css("display","none").delay(1500).slideDown(1000);
+$("div.content point").css("display","none").delay(1500).slideDown(1000);
 $("#b1").css("background-color","lightgray")
         .css("color","black");
            $("#b1").click(function(){
@@ -145,6 +149,7 @@ $("#b1").css("background-color","lightgray")
                    .css("color","black");
            $("#b2").css("background-color","rgba(0, 0, 0, 0)")
                    .css("color","lightgray");
+                   
            });
            $("#b2").click(function(){
            $("#b2").css("background-color","lightgray")
@@ -169,9 +174,11 @@ $("#b1").css("background-color","lightgray")
 
 <div class="content">
 <a>Your student is<br><b>begging</b> to you</a>
+<div id=dead>
 <dead>Deadline</dead>
 <deadtime><b>1</b></deadtime>
 <day>Day</day>
+</div>
 <need>Need</need>
 <point><b>50 points</b></point>
 </div>
