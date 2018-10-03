@@ -156,8 +156,16 @@ $("#b1").css("background-color","lightgray")
                    .css("color","black");
            $("#b1").css("background-color","rgba(0, 0, 0, 0)")
                    .css("color","lightgray");
+                   AR();
            });
 });
+function AR()
+{
+	$("div.absolute").animate({width:'-=87%',opacity:'0'},800);
+	$("div.content a").animate({left:'-200px'},800);
+    $("div.absolute").delay(800).animate({width:'+=87%',opacity:'1'},800).css("background-color","white").css("text-color","black");
+    $("div.content a").animate({opacity:'0'},1);
+}
 
 </script>
 </head>
@@ -185,7 +193,7 @@ $("#b1").css("background-color","lightgray")
 
 
 <button id=b1 class="button"><b>Map</b></button>
-<button id=b2 class="button button2"><b>AR</b></button>
+<button id=b2 class="button button2" ><b>AR</b></button>
 
 <div class="absolute">
 <pic><img src="CQ.png" alt="icon" width="60" height="47"></pic>
